@@ -1,2 +1,2 @@
 #!/bin/sh
-echo "Hello from Git Pipeline!"
+echo "Shalom from Git Pipeline!"
