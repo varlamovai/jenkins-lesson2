@@ -1,16 +1,11 @@
 pipeline {
     agent any
+
     stages {
-        stage('Environment Check') {
+        stage('Checkout & Run') {
             steps {
-                echo "Running on node: ${env.NODE_NAME}"
-                sh 'uname -a'
-                sh 'docker --version'
-            }
-        }
-        stage('Hello World') {
-            steps {
-                echo 'Jenkins setup verified successfully!'
+                sh 'chmod +x test.sh'
+                sh './test.sh'
             }
         }
     }
