@@ -8,5 +8,12 @@ pipeline {
                 sh './test.sh'
             }
         }
+        
+        stage('System Info') {
+            steps {
+                echo '=== Checking Disk Space ==='
+                sh 'df -h'
+            }
+        }
     }
 }
